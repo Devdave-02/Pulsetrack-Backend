@@ -23,16 +23,11 @@ npm install
 
 | Entity          | Description                                 | Relationships                              |
 | --------------- | ------------------------------------------- | ------------------------------------------ |
-| **User**        | Stores user info like name, email, password | One-to-Many → `Activities`, `Appointments` |
-| **Activity**    | Represents user’s health-related activities | One-to-Many → `User`                        |
-| **Doctor**      | Represents available doctors                | One-to-Many → `Appointments`               |
-| **Appointment** | Booking made by a `User` with a `Doctor`    | Many-to-One → `User`, `Doctor`             |
+|  User           | Stores user info like name, email, password | One-to-Many → `Activities`, `Appointments` |
+|  Activity       | Represents user’s health-related activities | One-to-Many → `User`                       |
+|  Doctor         | Represents available doctors                | One-to-Many → `Appointments`               |
+|  Appointment    | Booking made by a `User` with a `Doctor`    | Many-to-One → `User`, `Doctor`             |
 
-
-🔐 Authentication Flow
-JWT Access & Refresh Tokens for secure sessions
-Access Token is sent in the Authorization header
-Refresh Token is stored in cookies and used to reissue access tokens
 
 🚀 API Documentation
 🔑 Auth Routes

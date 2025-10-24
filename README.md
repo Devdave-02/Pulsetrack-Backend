@@ -24,7 +24,7 @@ npm install
 | Entity          | Description                                 | Relationships                              |
 | --------------- | ------------------------------------------- | ------------------------------------------ |
 | **User**        | Stores user info like name, email, password | One-to-Many → `Activities`, `Appointments` |
-| **Activity**    | Represents user’s health-related activities | Belongs to a `User`                        |
+| **Activity**    | Represents user’s health-related activities | One-to-Many → `User`                        |
 | **Doctor**      | Represents available doctors                | One-to-Many → `Appointments`               |
 | **Appointment** | Booking made by a `User` with a `Doctor`    | Many-to-One → `User`, `Doctor`             |
 
@@ -44,23 +44,29 @@ Refresh Token is stored in cookies and used to reissue access tokens
 
 
 🏃 Activities Routes
-Method	Endpoint	Description
-POST	/api/activities	Create new activity
-GET	/api/activities/	Get all user activities
+| Method | Endpoint           | Description             |
+| ------ | ------------------ | ----------------------- |
+| POST   | `/api/activities`  | Create new activity     |
+| GET    | `/api/activities/` | Get all user activities |
+
 
 🩺 Appointments Routes
-Method	Endpoint	Description
-POST	/api/appointments	Book an appointment
-GET	/api/appointments/	Get user’s appointments
+| Method | Endpoint             | Description             |
+| ------ | -------------------- | ----------------------- |
+| POST   | `/api/appointments`  | Book an appointment     |
+| GET    | `/api/appointments/` | Get user’s appointments |
+
 
 🧰 Environment Variables Overview
-Variable	Description
-MONGO_URI	MongoDB connection string
-PORT	Backend server port
-ACCESS_TOKEN_SECRET	JWT secret for access token
-REFRESH_TOKEN_SECRET	JWT secret for refresh token
-FRONTEND_URL	Allowed frontend origin (CORS)
-VITE_API_URL	Frontend base URL for API requests
+| Variable               | Description                        |
+| ---------------------- | ---------------------------------- |
+| `MONGO_URI`            | MongoDB connection string          |
+| `PORT`                 | Backend server port                |
+| `ACCESS_TOKEN_SECRET`  | JWT secret for access token        |
+| `REFRESH_TOKEN_SECRET` | JWT secret for refresh token       |
+| `FRONTEND_URL`         | Allowed frontend origin (CORS)     |
+| `VITE_API_URL`         | Frontend base URL for API requests |
+
 
 🌐 Deployment
 Backend (Render): https://pulsetrack-backend.onrender.com

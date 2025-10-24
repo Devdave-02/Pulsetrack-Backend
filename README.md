@@ -36,10 +36,12 @@ Refresh Token is stored in cookies and used to reissue access tokens
 
 🚀 API Documentation
 🔑 Auth Routes
-Method	Endpoint	Description
-POST	/api/auth/register	Register a new user
-POST	/api/auth/login	Log in and receive tokens
-POST	/api/auth/logout	Log out and clear tokens
+| Method | Endpoint             | Description               |
+| ------ | -------------------- | ------------------------- |
+| POST   | `/api/auth/register` | Register a new user       |
+| POST   | `/api/auth/login`    | Log in and receive tokens |
+| POST   | `/api/auth/logout`   | Log out and clear tokens  |
+
 
 🏃 Activities Routes
 Method	Endpoint	Description

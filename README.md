@@ -21,12 +21,13 @@ git clone https://github.com/Devdave-02/Pulsetrack-Backend.git
 cd pulsetrack-backend
 npm install
 
-🧠 Database & Relationships
-Entity	Description	Relationships
-User: Stores user info like name, email, password	One-to-Many→
-Activity: Represents user’s health-related activities	Belongs to a User
-Doctor: Represents available doctors	One-to-Many 
-Appointments: Appointment	Booking made by a User with a Doctor	Many-to-One → User, Doctor.
+| Entity          | Description                                 | Relationships                              |
+| --------------- | ------------------------------------------- | ------------------------------------------ |
+| **User**        | Stores user info like name, email, password | One-to-Many → `Activities`, `Appointments` |
+| **Activity**    | Represents user’s health-related activities | Belongs to a `User`                        |
+| **Doctor**      | Represents available doctors                | One-to-Many → `Appointments`               |
+| **Appointment** | Booking made by a `User` with a `Doctor`    | Many-to-One → `User`, `Doctor`             |
+
 
 🔐 Authentication Flow
 JWT Access & Refresh Tokens for secure sessions

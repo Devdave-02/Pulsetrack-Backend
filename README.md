@@ -23,7 +23,7 @@ npm install
 
 | Entity          | Description                                 | Relationships                              |
 | --------------- | ------------------------------------------- | ------------------------------------------ |
-|  User           | Stores user info like name, email, password | One-to-Many → `Activities`, `Appointments` |
+|  User           | Stores user info name, email, password      | One-to-Many → `Activities`, `Appointments` |
 |  Activity       | Represents user’s health-related activities | One-to-Many → `User`                       |
 |  Doctor         | Represents available doctors                | One-to-Many → `Appointments`               |
 |  Appointment    | Booking made by a `User` with a `Doctor`    | Many-to-One → `User`, `Doctor`             |

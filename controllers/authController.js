@@ -1,6 +1,6 @@
 import bcrypt from "bcryptjs"; // For hashing and comparing passwords
 import User from "../models/User.js"; 
-import TokenBlacklist from "../models/tokenblacklist.js"; 
+import TokenBlacklist from "../models/Tokenblacklist.js"; 
 import { generateTokens } from "../utils/generateToken.js"; // Function to create access & refresh tokens
 
 // ✅ Register a new user
@@ -75,3 +75,4 @@ export const logout = async (req, res) => {
   }
   res.json({ message: "Logged out successfully" }); // Confirm logout
 };
+
